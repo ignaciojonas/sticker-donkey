@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+
+  postgres:
+    image: postgres:15.3
+    environment:
+      POSTGRES_USER: rails
+      POSTGRES_PASSWORD: test_db_password
+    ports: 
+      - '5432:5432'
+    volumes:
+      - rails-postgres:/var/lib/postgresql/data
+
+  rails:
+    build:
+      context: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle install && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - ./sticker-donkey-api:/usr/src/app
+    links:
+      - postgres
+    ports:
+      - '3000:3000'
+
+volumes:
+  rails-postgres:
