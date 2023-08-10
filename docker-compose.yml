@@ -36,6 +36,8 @@ services:
     volumes:
       - ./sticker-donkey-react:/app
     command: npm run dev
+    links:
+      - rails
     ports:
       - '4000:4000'
 
