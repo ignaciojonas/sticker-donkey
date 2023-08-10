@@ -25,6 +25,19 @@ services:
       - postgres
     ports:
       - '3000:3000'
+  
+  react:
+    build:
+      dockerfile: Dockerfile.react
+      context: .
+      args:
+        USER_ID: $USER_ID
+        GROUP_ID: $GROUP_ID
+    volumes:
+      - ./sticker-donkey-react:/app
+    command: npm run dev
+    ports:
+      - '4000:4000'
 
 volumes:
   rails-postgres:

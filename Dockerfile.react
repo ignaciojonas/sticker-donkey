@@ -1,0 +1,34 @@
+# pull official base image
+FROM node:20.5
+
+ARG USER_ID
+ARG GROUP_ID
+
+# set working directory
+WORKDIR /app
+
+RUN userdel -r node
+
+ENV PATH /app/node_modules/.bin:$PATH
+
+ENV USER_ID=$USER_ID
+ENV GROUP_ID=$GROUP_ID
+ENV USER_ID=${USER_ID:-1001}
+ENV GROUP_ID=${GROUP_ID:-1001}
+
+RUN addgroup --gid ${GROUP_ID} app
+RUN adduser --disabled-password --gecos '' --uid ${USER_ID} --gid ${GROUP_ID} app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+vim
+
+RUN chown -R app:app /app
+
+# USER app
+
+
+# install app dependencies
+# COPY sticker-donkey-react/package* ./
+
+# RUN npm install --silent
+
