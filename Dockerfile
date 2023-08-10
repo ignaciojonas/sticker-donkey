@@ -26,8 +26,6 @@ RUN chown -R app:app /usr/local/lib/
 
 USER app
 
-COPY --chown=app:app Gemfile* ./
+COPY --chown=app:app sticker-donkey-api/Gemfile* ./
 
 RUN bundle install
-
-EXPOSE 3000

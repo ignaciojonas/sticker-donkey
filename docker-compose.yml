@@ -19,7 +19,8 @@ services:
         USER_ID: $USER_ID
         GROUP_ID: $GROUP_ID
     volumes:
-      - .:/usr/src
+      - ./sticker-donkey-api:/usr/src
+    command: bundle exec rails s -b 0.0.0.0
     links:
       - postgres
     ports:
