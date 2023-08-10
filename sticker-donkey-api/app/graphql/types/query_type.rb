@@ -7,11 +7,21 @@ module Types
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
+    field :stickers, [Types::StickerType], null: false
+    def stickers
+      Sticker.all
+    end
+
+    field :sticker, Types::StickerType, null: false do
+      argument :id, ID, required: true
+    end
+    def sticker(id:)
+      Sticker.find(id)
+    end
+
+    field :orders, [Types::OrderType], null: false
+    def orders
+      Order.all
     end
   end
 end
