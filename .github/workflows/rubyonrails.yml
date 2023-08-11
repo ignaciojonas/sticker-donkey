@@ -12,7 +12,7 @@ on:
     branches: [ "main" ]
 defaults:
     run:
-      working-directory: sticker-donkey-api
+      working-directory: ./sticker-donkey-api
 jobs:
   test:
     runs-on: ubuntu-latest
