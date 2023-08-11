@@ -1,3 +1,4 @@
+[![Ruby on Rails CI](https://github.com/ignaciojonas/sticker-donkey/actions/workflows/rubyonrails.yml/badge.svg)](https://github.com/ignaciojonas/sticker-donkey/actions/workflows/rubyonrails.yml)
 # Sticker Donkey 🫏
 Welcome to the Sticker Donkey repo, this app is a POC to test some technologies.  
 
