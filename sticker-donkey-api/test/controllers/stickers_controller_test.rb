@@ -2,7 +2,7 @@ require "test_helper"
 
 class StickersControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @sticker = stickers(:one)
+    @sticker = stickers(:donkey)
   end
 
   test "should get index" do

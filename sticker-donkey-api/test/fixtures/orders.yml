@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  user_id: 1
-  sticker_id: 1
-  quantity: 1
+order1:
+  user: john
+  sticker: donkey
+  quantity: 10
 
-two:
-  user_id: 1
-  sticker_id: 1
-  quantity: 1
+order2:
+  user: jane
+  sticker: horse
+  quantity: 100

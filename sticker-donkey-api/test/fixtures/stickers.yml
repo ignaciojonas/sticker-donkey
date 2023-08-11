@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  image_url: MyString
-  price: 9.99
+donkey:
+  name: Mini Donkey
+  image_url: http://image.com/donkey
+  price: 0.25
 
-two:
-  name: MyString
-  image_url: MyString
-  price: 9.99
+horse:
+  name: Super Horse
+  image_url: http://image.com/horse
+  price: 10.99

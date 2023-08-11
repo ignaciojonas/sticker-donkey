@@ -2,7 +2,9 @@ require "test_helper"
 
 class OrdersControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @order = orders(:one)
+    @order = orders(:order1)
+    @sticker = stickers(:donkey)
+    @user = users(:john)
   end
 
   test "should get index" do
@@ -12,7 +14,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create order" do
     assert_difference("Order.count") do
-      post orders_url, params: { order: { quantity: @order.quantity, sticker_id: @order.sticker_id, user_id: @order.user_id } }, as: :json
+      post orders_url, params: { order: { quantity: @order.quantity, sticker_id: @sticker.id, user_id: @user.id } }, as: :json
     end
 
     assert_response :created
@@ -24,7 +26,7 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update order" do
-    patch order_url(@order), params: { order: { quantity: @order.quantity, sticker_id: @order.sticker_id, user_id: @order.user_id } }, as: :json
+    patch order_url(@order), params: { order: { quantity: @order.quantity, sticker_id: @sticker.id, user_id: @user.id } }, as: :json
     assert_response :success
   end
 
