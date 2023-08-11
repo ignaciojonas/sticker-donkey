@@ -1,5 +1,5 @@
 # Sticker Donkey 🫏
-Welcome to the Sticker Donkey repo, this app a POC to test some technologies.  
+Welcome to the Sticker Donkey repo, this app is a POC to test some technologies.  
 
 # Technologies
 ## Backend
@@ -33,4 +33,5 @@ docker-compose run rails bundle exec db:create db:migrate db:seed
 
 You can access the app in http://localhost:4000
 
-
+## Application running
+<img width="1325" alt="image" src="https://github.com/ignaciojonas/sticker-donkey/assets/874682/926e4158-66fb-4ec2-8e0c-3f976accbe07">
