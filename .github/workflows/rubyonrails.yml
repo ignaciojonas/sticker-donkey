@@ -27,6 +27,7 @@ jobs:
           POSTGRES_PASSWORD: test_db_password
     env:
       RAILS_ENV: test
+      DATABASE_HOST: localhost
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
