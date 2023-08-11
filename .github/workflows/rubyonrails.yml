@@ -10,12 +10,12 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-defaults:
-  run:
-    working-directory: sticker-donkey-api
 jobs:
   test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: sticker-donkey-api
     services:
       postgres:
         image: postgres:11-alpine
